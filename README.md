@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Next.js Auth App : Cosmetics
 
-## Getting Started
+A simple full-stack application built with Next.js (App Router), NextAuth.js, and a lightweight Express.js backend.
+Includes public + protected pages, Google & credentials login, and product management.
 
-First, run the development server:
+🚀 Live Demo
 
-```bash
+Frontend: https://client-phi-hazel.vercel.app/
+
+
+📦 Repository
+
+Add GitHub link
+
+📘 Overview
+
+This project showcases:
+
+Next.js App Router
+
+Authentication with NextAuth.js
+
+Protected routes (Add Product, Manage Products)
+
+Clean UI, responsive layout
+
+CRUD operations with Express backend
+
+🛣️ Routes
+
+Public: /, /items, /items/[id], /login, /register
+Protected: /add-product, /manage-products
+
+Unauthorized users are redirected to /login.
+
+🔐 Authentication
+
+Google login
+
+Email/password (credentials)
+
+After login → redirect to /
+
+Navbar updates to show profile dropdown + product management links
+
+🛒 Features
+
+Landing Page (7 sections)
+
+Item List (search + grid of cards)
+
+Item Details (banner + full info)
+
+Add Product (form + validation)
+
+Manage Products (table/grid + View/Delete)
+
+🛠️ Stack
+
+Next.js (App Router)
+
+NextAuth.js
+
+Tailwind CSS
+
+Express.js backend
+
+MongoDB / JSON storage
+
+⚙️ Setup
+
+Clone:
+
+git clone <repo-url>
+
+
+Install dependencies:
+
+npm install
+
+
+Env variables (.env.local):
+
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-secret
+GOOGLE_CLIENT_ID=xxx
+GOOGLE_CLIENT_SECRET=xxx
+API_BASE_URL=http://localhost:5000
+
+
+Run backend:
+
+npm start
+
+
+Run frontend:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
