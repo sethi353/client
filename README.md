@@ -8,9 +8,7 @@ Includes public + protected pages, Google & credentials login, and product manag
 Frontend: https://client-phi-hazel.vercel.app/
 
 
-📦 Repository
 
-Add GitHub link
 
 📘 Overview
 
@@ -18,7 +16,7 @@ This project showcases:
 
 Next.js App Router
 
-Authentication with NextAuth.js
+Authentication with Firebase
 
 Protected routes (Add Product, Manage Products)
 
@@ -59,13 +57,13 @@ Manage Products (table/grid + View/Delete)
 
 Next.js (App Router)
 
-NextAuth.js
+Firebase
 
 Tailwind CSS
 
 Express.js backend
 
-MongoDB / JSON storage
+
 
 ⚙️ Setup
 
