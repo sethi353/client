@@ -7,7 +7,7 @@ export default function Products() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://cosmetic-backend-delta.vercel.app/api/products")
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch(console.error);
