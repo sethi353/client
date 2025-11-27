@@ -16,7 +16,7 @@ export default function ManageProducts() {
     }
 
     if (user) {
-      fetch("http://localhost:5000/api/products")
+      fetch("https://cosmetic-backend-delta.vercel.app/api/products")
         .then((res) => res.json())
         .then(setProducts)
         .catch(console.error);

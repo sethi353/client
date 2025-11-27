@@ -40,7 +40,7 @@ export default function AddProduct() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/products", {
+      const res = await fetch("https://cosmetic-backend-delta.vercel.app/api/products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, desc, price, image }),
