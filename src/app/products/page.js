@@ -5,6 +5,8 @@ import Link from "next/link";
 
 export default function Products() {
   const [items, setItems] = useState([]);
+  const [search, setSearch] = useState("");
+
 
   useEffect(() => {
     fetch("https://cosmetic-backend-delta.vercel.app/api/products")
@@ -13,9 +15,30 @@ export default function Products() {
       .catch(console.error);
   }, []);
 
+
+
+   // 🔍 Filter logic
+  const filteredItems = items.filter((item) =>
+    item.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div>
       <h2 className="text-3xl font-semibold mb-6">Products</h2>
+
+
+    {/* 🔍 Search Input */}
+      <input
+        type="text"
+        placeholder="Search products..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="w-full mb-6 p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-pink-400"
+      />
+
+
+
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {items.map((item) => (
           <div key={item.id} className="shadow p-4 rounded-lg bg-white">
@@ -27,6 +50,13 @@ export default function Products() {
           </div>
         ))}
       </div>
+
+    {filteredItems.length === 0 && (
+        <p className="text-center text-gray-500 mt-10">
+          No products found 
+        </p>
+      )}
+
     </div>
   );
 }
